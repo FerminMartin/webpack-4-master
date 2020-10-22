@@ -6,8 +6,9 @@ const webpack = require('webpack')
 module.exports = {
   entry: {
     home: path.resolve(__dirname,'src/js/index.js'),
+    contact: path.resolve(__dirname,'src/js/contact.js'),
   },
-  mode: 'development',
+  mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js'
@@ -82,7 +83,7 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: 'all',
-      miniSize: 0,
+      minSize: 0,
       name: 'commons'
     }
   }
